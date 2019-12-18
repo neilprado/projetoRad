@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'movies#index'
   resources :users
 
+  get 'movies/search', to: "movies#search"
+
 end

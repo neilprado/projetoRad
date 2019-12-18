@@ -1,0 +1,14 @@
+<h1>Movies</h1>
+
+<div class="row">
+  <% @now_playing.each do |movie| %>
+  <div class="card col-md-4" style="width: 18rem;">
+
+    <img src="https://image.tmdb.org/t/p/w500/<%= movie.backdrop_path%>" class="card-img-top" alt="...">
+    <div class="card-body custom-card">
+      <h5 class="card-title"><%= movie.title%></h5>
+      <p class="card-text"><%= movie.overview%></p>
+    </div>
+  </div>
+  <% end %>
+</div>
