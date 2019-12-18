@@ -8,6 +8,8 @@
     <div class="card-body custom-card">
       <h5 class="card-title"><%= movie.title%></h5>
       <p class="card-text"><%= movie.overview%></p>
+      <%= link_to "Detalhes", {:controller => "movies", :action => "show", :id => movie.id }%>
+
     </div>
   </div>
   <% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  conteudo: MyString
+  data: 2019-12-18
+  idFilme: 1
+
+two:
+  nome: MyString
+  conteudo: MyString
+  data: 2019-12-18
+  idFilme: 1
