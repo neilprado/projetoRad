@@ -5,10 +5,10 @@
         <a class="nav-link" href="<%= movies_index_path %>">Home</a>
       </li>
       <li class="nav-item <%='active' if params[:controller] == 'now' %>">
-        <a class="nav-link" href="<%= movies_index_path %>">Populares</a>
+        <a class="nav-link" href="<%= movies_popular_path %>">Populares</a>
       </li>
       <li class="nav-item <%='active' if params[:controller] == 'upcoming' %>">
-        <a class="nav-link" href="<%= movies_index_path %>">Lançamento</a>
+        <a class="nav-link" href="<%= movies_upcoming_path %>">Lançamento</a>
       </li>
     </ul>
   </div>
