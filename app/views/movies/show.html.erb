@@ -60,8 +60,7 @@
   </div>
     
   <div class="field">
-    <%= form.label :idFilme %>    
-    <%= form.text_field :idFilme, :input_html => {:idFilme => @movie['id']}%>
+    <%= form.hidden_field :idFilme, :input_html => {:idFilme => @movie['id']}%>
   </div>
 
   <div class="actions">
