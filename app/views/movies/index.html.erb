@@ -6,12 +6,15 @@
 <div class="row">
   <% @now_playing.each do |movie| %>
   <div class="card col-md-4" style="width: 18rem;">
-
-    <img src="https://image.tmdb.org/t/p/w500/<%= movie.backdrop_path%>" class="card-img-top" alt="...">
+    <% if movie.backdrop_path == "" %>
+      <img src="br.png" class="card-img-top" alt="...">
+    <% else %>
+      <img src="https://image.tmdb.org/t/p/w500/<%= movie.backdrop_path%>" class="card-img-top" alt="...">
+    <% end %>
     <div class="card-body custom-card">
       <h5 class="card-title"><%= movie.title%></h5>
       <p class="card-text"><%= movie.overview%></p>
-      <%= link_to "Detalhes", {:controller => "movies", :action => "show", :id => movie.id }%>      
+      <%= link_to "Detalhes", {:controller => "movies", :action => "show", :id => movie.id }, :class => 'btn btn-primary' %>
     </div>
   </div>
   <% end %>
