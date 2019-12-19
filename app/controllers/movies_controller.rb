@@ -19,7 +19,7 @@ class MoviesController < ApplicationController
 
   def search
     Tmdb::Api.key('76a5c60d4eb397b26f90d390c849ccbf')
-    Tmdb::Api.language(params[:idioma])    
+    Tmdb::Api.language(params[:idioma])
     @search = Tmdb::Movie.find(params[:title])
   end
 
@@ -27,9 +27,9 @@ class MoviesController < ApplicationController
     Tmdb::Api.key('76a5c60d4eb397b26f90d390c849ccbf')
     Tmdb::Api.language('pt-BR')
     @comments = Comment.where(["idFilme = ?", params[:id]])
-    puts @comments
+    # @comments = Comment.all
     @comment = Comment.new
     @movie = Tmdb::Movie.detail(params[:id])
-  end  
+  end
 
 end

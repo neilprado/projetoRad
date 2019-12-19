@@ -1,35 +1,53 @@
-<h1>Detalhes</h1>
-
-<h5><%= @movie['title'] %></h5>
-<h5><%= @movie['popularity'] %></h5>
-<h5><%= @movie['tagline'] %></h5>
+<div class="container">
+  <!-- Portfolio Item Heading -->
+  <h1 class="my-4"><%= @movie['title'] %>
+  </h1>
+  <!-- Portfolio Item Row -->
+  <div class="row">
+    <div class="col-md-8">
+      <img class="img-fluid pattern" src="https://image.tmdb.org/t/p/w500/<%= @movie['backdrop_path']%>" alt="">
+    </div>
+    <div class="col-md-4">
+      <h3 class="my-3">Sinopse</h3>
+      <p><%= @movie['overview'] %></p>
+      <h3 class="my-3">Informações</h3>
+      <ul>
+        <li>Nota <%= @movie['vote_average'] %></li>
+        <li>Estréia  <%= @movie['release_date'] %></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /.row -->
+  <!-- Related Projects Row -->
+  <h3 class="my-4">Related Projects</h3>
+  <div class="row">
+  </div>
+  <!-- /.row -->
 <h1>Comments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Conteudo</th>
-      <th>Data</th>
-      <th>Idfilme</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.nome %></td>
-        <td><%= comment.conteudo %></td>
-        <td><%= comment.data %></td>
-        <td><%= comment.idFilme %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<section class="comment-list">
+  <% @comments.each do |comment| %>
+      <!-- First Comment -->
+      <article class="row">
+        <div class="col-md-10 col-sm-10">
+          <div class="panel panel-default arrow left">
+            <div class="panel-body">
+              <header class="text-left">
+                <div class="comment-user"><i class="fa fa-user"></i> <%= comment.nome %></div>
+            
+              </header>
+              <div class="comment-post">
+                <p>
+                  <%= comment.conteudo %>
+                </p>
+              </div>
+              <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <% end %>
+    </section>
+<!-- /.container -->
 
 <%= form_with(model: @comment, local: true) do |form| %>
   <% if @comment.errors.any? %>
@@ -58,13 +76,13 @@
     <%= form.label :data %>
     <%= form.date_select :data %>
   </div>
-    
+
   <div class="field">
-    <%= form.hidden_field :idFilme, :input_html => {:idFilme => @movie['id']}%>
+    <%= form.hidden_field :idFilme, :value => @movie['id'] %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
-
+</div>
