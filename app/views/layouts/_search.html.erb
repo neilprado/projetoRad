@@ -4,21 +4,22 @@
     <div class="col-12 col-md-10 col-lg-8">
       <form action="<%= movies_search_path %>" method="get">
         <div class="card-body row no-gutters align-items-center">
+
+          <div class="col-auto custom-div">
+            <label for="exampleFormControlSelect1">Idioma</label>
+              <select name="idioma" class="">
+                <option value="pt-BR">Português</option>
+                <option value="en">Inglês</option>
+              </select>
+          </div>
           <div class="col-auto">
             <i class="fas fa-search h4 text-body"></i>
           </div>
             <div class="col">
-              <label for="exampleFormControlSelect1"><%= t 'global.label.lang' %></label>
-                <select name="idioma" class="">
-                  <option value="pt-BR">Português</option>
-                  <option value="en">Inglês</option>
-                  <option value="ja">Japonês</option>
-                  <option value="es">Espanhol</option>
-                </select>
-               <input name="title" class="form-control form-control-lg form-control-borderless" type="search" placeholder="<%= t 'global.search.placeholder' %>">
+               <input name="title" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Busque aqui um filme">
             </div>
             <div class="col-auto">
-              <button class="btn btn-lg btn-success" type="submit"><%= t 'global.search.button' %></button>
+              <button class="btn btn-lg btn-success" type="submit">Search</button>
             </div>
 
         </div>
