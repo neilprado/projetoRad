@@ -29,11 +29,11 @@
       <!-- First Comment -->
       <article class="row">
         <div class="col-md-10 col-sm-10">
-          <div class="panel panel-default arrow left">
+          <div class="panel panel-default">
             <div class="panel-body">
               <header class="text-left">
                 <div class="comment-user"><i class="fa fa-user"></i> <%= comment.nome %></div>
-            
+
               </header>
               <div class="comment-post">
                 <p>
@@ -61,28 +61,23 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-group">
+    <div class="field">
+      <%= form.text_field :nome,:class => "nome-input form-control", placeholder: "Nome"%>
+    </div>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <div class="field">
+      <%= form.text_area :conteudo, :class => "nome-input form-control",placeholder: "Comentário" %>
+    </div>
+
+    <div class="field">
+      <%= form.hidden_field :idFilme, :value => @movie['id'] %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Salvar', :class => 'btn btn-primary' %>      
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :conteudo %>
-    <%= form.text_field :conteudo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :data %>
-    <%= form.date_select :data %>
-  </div>
-
-  <div class="field">
-    <%= form.hidden_field :idFilme, :value => @movie['id'] %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
 </div>
