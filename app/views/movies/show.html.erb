@@ -1,29 +1,27 @@
 <div class="container">
-  <!-- Portfolio Item Heading -->
   <h1 class="my-4"><%= @movie['title'] %>
   </h1>
-  <!-- Portfolio Item Row -->
   <div class="row">
     <div class="col-md-8">
       <img class="img-fluid pattern" src="https://image.tmdb.org/t/p/w500/<%= @movie['backdrop_path']%>" alt="">
     </div>
     <div class="col-md-4">
-      <h3 class="my-3">Sinopse</h3>
+      <h3 class="my-3"><%= t 'item.synopsis' %></h3>
       <p><%= @movie['overview'] %></p>
-      <h3 class="my-3">Informações</h3>
+      <h3 class="my-3"><%= t 'item.info' %></h3>
       <ul>
-        <li>Nota <%= @movie['vote_average'] %></li>
-        <li>Estréia  <%= @movie['release_date'] %></li>
+        <li><%= t 'item.vote' %> <%= @movie['vote_average'] %></li>
+        <li><%= t 'item.starts' %>  <%= @movie['release_date'] %></li>
       </ul>
     </div>
   </div>
   <!-- /.row -->
   <!-- Related Projects Row -->
-  <h3 class="my-4">Related Projects</h3>
+  <h3 class="my-4"><%= t 'item.related' %></h3>
   <div class="row">
   </div>
   <!-- /.row -->
-<h1>Comments</h1>
+<h1><%= t 'item.comments' %></h1>
 <section class="comment-list">
   <% @comments.each do |comment| %>
       <!-- First Comment -->

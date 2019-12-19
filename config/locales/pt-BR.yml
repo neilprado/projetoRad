@@ -13,3 +13,12 @@ pt-BR:
       button: Buscar
     label:
       lang: Idioma
+  item:
+    synopsis: Sinopse
+    info: Informações
+    vote: Média do Público
+    starts: Estreia
+    related: Filmes Relacionados
+    comments: Comentários
+    name: Nome
+    comment: Comentário

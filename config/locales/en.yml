@@ -32,7 +32,7 @@
 en:
   home:
     home: Movies
-    title: This application aims to do a project in Agile Development using Rails!
+    title: This application aims to develop a web application in Agile Development using Rails!
     subtitle: To us, Valeria gave the mission to talk about i18n!
   global:
     menu:
@@ -42,3 +42,14 @@ en:
     search:
       placeholder: Please digit a movie to search
       button: Search
+    label:
+      lang: Language
+  item:
+    synopsis: Synopsis
+    info: Info
+    vote: Vote Average
+    starts: Released in
+    related: Related Movies
+    comments: Comments
+    name: Name
+    comment: Comment
