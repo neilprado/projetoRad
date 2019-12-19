@@ -3,15 +3,15 @@
   </h1>
   <div class="row">
     <div class="col-md-8">
-    <% if movie.backdrop_path == nil %>
+    <% if @movie['backdrop_path'] == nil %>
       <img src="https://image.tmdb.org/t/p/w500//5eDlAUFVQpy3rVhm4jHwZVBSqlP.jpg" class="card-img-top" alt="...">
     <% end %>
       <img class="img-fluid pattern" src="https://image.tmdb.org/t/p/w500/<%= @movie['backdrop_path']%>" alt="">
     </div>
     <div class="col-md-4">
       <h3 class="my-3"><%= t 'item.synopsis' %></h3>
-      <% if movie['overview'] == "" %>
-        <%= movie['overview'] = "Não há sinopse disponível para este idioma" %>
+      <% if @movie['overview'] == "" %>
+        <%= @movie['overview'] = "Não há sinopse disponível para este idioma" %>
       <% end %>
       <p><%= @movie['overview'] %></p>
       <h3 class="my-3"><%= t 'item.info' %></h3>
