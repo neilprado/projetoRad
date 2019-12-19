@@ -6,22 +6,21 @@
         <div class="card-body row no-gutters align-items-center">
 
           <div class="col-auto custom-div">
-            <label for="exampleFormControlSelect1">Idioma</label>
+            <label for="exampleFormControlSelect1"><%= t 'global.label.lang' %></label>
               <select name="idioma" class="">
-                <option value="pt-BR">Português</option>
-                <option value="en">Inglês</option>
+                <option value="pt-BR"><%= t 'language.name.pt' %></option>
+                <option value="en"><%= t 'language.name.en' %></option>
               </select>
           </div>
           <div class="col-auto">
             <i class="fas fa-search h4 text-body"></i>
           </div>
             <div class="col">
-               <input name="title" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Busque aqui um filme">
+               <input name="title" class="form-control form-control-lg form-control-borderless" type="search" placeholder="<%= t 'global.search.placeholder' %>">
             </div>
             <div class="col-auto">
-              <button class="btn btn-lg btn-success" type="submit">Search</button>
+              <button class="btn btn-lg btn-success" type="submit"><%= t 'global.search.button' %></button>
             </div>
-
         </div>
       </form>
     </div>

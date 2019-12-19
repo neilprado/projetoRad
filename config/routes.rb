@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :comments
   get 'movies/index'
   root 'movies#index'
-  resources :users
 
   get 'movies/search', to: "movies#search"
   get 'movies/popular', to: "movies#popular"

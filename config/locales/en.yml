@@ -53,3 +53,7 @@ en:
     comments: Comments
     name: Name
     comment: Comment
+  language:
+    name:
+      en: English
+      pt: Portuguese

@@ -22,3 +22,8 @@ pt-BR:
     comments: Comentários
     name: Nome
     comment: Comentário
+  language:
+    name:
+      en: Inglês
+      pt: Português
+  
