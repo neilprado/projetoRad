@@ -30,4 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home:
+    home: Movies
+    title: This application aims to do a project in Agile Development using Rails!
+    subtitle: To us, Valeria gave the mission to talk about i18n!
+  global:
+    menu:
+      home: Home
+      popular: Popular
+      upcoming: Upcoming
+    search:
+      placeholder: Please digit a movie to search
+      button: Search

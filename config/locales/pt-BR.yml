@@ -1,0 +1,13 @@
+pt-BR:
+  home:
+    home: Filmes
+    title: Esta aplicação tem como objetivo realizar o projeto para a disciplina de Desenvolvimento Ágil com Rails!
+    subtitle: Para nós, Valeria deu a missão de falar sobre o i18n!
+  global:
+    menu:
+      home: Home
+      popular: Popular
+      upcoming: Lançamentos
+    search:
+      placeholder: Busque um filme aqui
+      button: Buscar
