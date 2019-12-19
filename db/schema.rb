@@ -21,12 +21,4 @@ ActiveRecord::Schema.define(version: 2019_12_18_193347) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nome"
-    t.string "email"
-    t.string "senha"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end

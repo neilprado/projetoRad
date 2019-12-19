@@ -39,6 +39,7 @@ en:
       home: Home
       popular: Popular
       upcoming: Upcoming
+      details: Details
     search:
       placeholder: Please digit a movie to search
       button: Search
