@@ -41,7 +41,7 @@ en:
       upcoming: Upcoming
       details: Details
     search:
-      placeholder: Please digit a movie to search
+      placeholder: Please type a movie to search
       button: Search
     label:
       lang: Language
